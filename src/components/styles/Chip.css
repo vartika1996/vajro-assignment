@@ -1,0 +1,70 @@
+.chipContainer {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    background-color: #1a2c47;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .16);
+    border-radius: 8px;
+    width: fit-content;
+    padding: 8px 16px;
+    position: fixed;
+    bottom: 10px;
+    z-index: 7;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.filterChip {
+    border-right: 1px solid white;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.heading {
+    font-size: 12px;
+    color: white;
+    margin-left: 10px;
+}
+
+.sortChip {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.filter.filter {
+    border: unset;
+}
+
+.popover-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.close-btn {
+    border: none;
+    background-color: unset;
+}
+
+.sort-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+}
+
+.sort-option {
+    border: none;
+    background-color: unset;
+    display: flex;
+    height: 30px;
+    align-items: center;
+}
+
+.highlight {
+    background-color: lightgray;
+}

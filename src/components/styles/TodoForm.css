@@ -1,0 +1,67 @@
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100%;
+    transition: right 0.3s ease-in-out;
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar.open {
+    right: 0;
+    padding: 30px 50px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    color: dimgrey;
+  }
+
+  .input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    color: #000;
+  }
+
+  .todo-input.todo-input {
+    margin-bottom: 2px;
+  }
+
+  .error {
+    color: red;
+    margin-bottom: 20px;
+  }
+
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .secondary-button.secondary-button {
+    color: #ffffff;
+    background-color: grey;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 720px) {
+    .sidebar {
+      width: 260px;
+    }
+  }
+  

@@ -1,0 +1,11 @@
+.button {
+    color: #ffffff;
+    background-color: blueviolet;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}

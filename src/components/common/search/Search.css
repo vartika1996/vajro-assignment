@@ -1,0 +1,46 @@
+.searchBar{
+    display: flex;
+    gap: 10px;
+    width: 70%;
+}
+
+.searchButton {
+    display: flex;
+}
+
+.searchInput {
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.clear-button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #999;
+  }
+  
+  .clear-button:hover {
+    color: #333;
+  }
+
+  @media (max-width: 720px) {
+    .searchBar {
+      width: 100%;
+    }
+  }

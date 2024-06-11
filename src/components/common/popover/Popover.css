@@ -1,0 +1,74 @@
+.popover-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    overflow: auto;
+}
+
+.popover-container.open {
+    transform: translateY(0);
+}
+
+.popover-trigger {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.popover-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 999;
+    display: none;
+}
+
+.popover-container.open .backdrop {
+    display: block;
+}
+
+/* Optional styles to adjust popover content */
+.popover-content fieldset {
+    border: none;
+    padding: 10px;
+}
+
+.popover-content h3 {
+    margin-bottom: 10px;
+}
+
+.popover-content .filter-group {
+    margin-bottom: 10px;
+}
+
+.popover-content .filter-option {
+    margin-bottom: 5px;
+}
+
+/* Adjust popover content height based on its actual height */
+.popover-content.auto-height {
+    height: auto !important;
+}
