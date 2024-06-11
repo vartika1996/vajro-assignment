@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Task Manager Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Task Manager Application is built using React. It allows users to add, edit, delete, and mark tasks as completed. The application also includes features for filtering, sorting, and searching tasks to help users manage their tasks efficiently.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Add Task**: Users can add new tasks with a title, description, priority, and due date.
+- **Delete Task**: Users can delete tasks they no longer need.
+- **Mark as Completed**: Users can mark tasks as completed.
+- **Filter Tasks**: Users can filter tasks based on priority, due date, and completion status.
+- **Sort Tasks**: Users can sort tasks by various criteria such as due date and priority.
+- **Search Tasks**: Users can search for tasks by title or description.
 
-### `npm start`
+## External Dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application uses the following external dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **react-datepicker**: For selecting due dates for tasks.
+- **react-router**: For managing routing within the application.
+- **react-router-dom**: For managing routing within the application, specifically for DOM environments.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the application locally, follow these steps:
 
-### `npm run build`
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/vartika1996/vajro-assignment.git
+    cd vajro-assignment
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install the dependencies**:
+    ```bash
+    npm install
+    ```
+3. **Build the application**:
+    ```bash
+    npm build
+    ```
+4. **Start the application**:
+    ```bash
+    npm start
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The application should now be running on `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Code Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The application is structured as follows:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **src/**: Contains the source code for the application.
+  - **components/**: Contains all components , style , hooks, utils etc.
+    - **common/**: Contains reusable components like buttons, popovers, etc.
+    - **ui/**: Contains all main components of the application.
+    - **styles/**: Contains CSS files for styling components.
+    - **utils/**: Contains utility functions and data.
+  - **App.js**: The main app component.

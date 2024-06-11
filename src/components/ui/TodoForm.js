@@ -149,7 +149,7 @@ const handleDelete = () => {
   return (
     <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`} ref={sidebarRef} aria-hidden={!isSidebarOpen}>
       <div className="sidebar-content">
-        <h2>{editTodo ? 'Edit Todo' : 'Add Todo'}</h2>
+        <h2>{editTodo ? 'Edit Task' : 'Add Task'}</h2>
         <form className='form'>
           <label htmlFor="todo">Title:</label>
           <input 
@@ -205,7 +205,7 @@ const handleDelete = () => {
           {editTodo && !editTodo.isCompleted ?
             <>
               <div className="form-buttons">
-                <h4>Mark this Todo as Complete</h4>
+                <h4>Mark this Task as Complete</h4>
                 <Button handleClick={() => handleMarkAsComplete()}>
                   Mark as Complete
                 </Button>

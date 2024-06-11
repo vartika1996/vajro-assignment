@@ -6,8 +6,9 @@ const SearchComponent = ({ todoData, setSearchResults, className, buttonClassNam
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = () => {
-    if(searchTerm === '') {
+    if(searchTerm === '' || searchTerm.trim() === '') {
         setSearchResults(todoData);
+        setSearchTerm('');
     } else {
         const results = todoData.filter(todo => {
             const titleMatch = todo.todo.toLowerCase().includes(searchTerm.toLowerCase());

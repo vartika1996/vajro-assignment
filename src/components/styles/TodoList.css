@@ -253,6 +253,11 @@
   flex-direction: row-reverse;
 }
 
+.no-data {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 1120px) {
   .table-cell {
     min-width: 80px;

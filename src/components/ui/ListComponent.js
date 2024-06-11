@@ -19,7 +19,7 @@ const ListComponent = ({ activeTodos, updateTodo }) => {
                 {activeTodos.length === 0 ? (
                     <div className="table-row">
                         <div className="table-cell" colSpan="6">
-                            <NoData />
+                            <NoData className="no-data" />
                         </div>
                     </div>
                 ) : (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NoData = (className) => {
+const NoData = ({className}) => {
   return (
     <div className={`no-data-container ${className}`}>
       --No Data--

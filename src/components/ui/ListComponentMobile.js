@@ -9,7 +9,7 @@ const ListComponentMobile = ({ activeTodos, updateTodo }) => {
             {activeTodos.length === 0 ? (
                 <div className="mobile-table-row">
                     <div className="mobile-table-cell" role="cell" colSpan="6">
-                        <NoData />
+                        <NoData className="no-data" />
                     </div>
                 </div>
             ) : (
