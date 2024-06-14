@@ -2,7 +2,18 @@ import React from 'react';
 import '../styles/TodoList.css';
 import NoData from '../common/NoData';
 
-const ListComponent = ({ activeTodos, updateTodo }) => {
+const ListComponent = ({ activeTodos, updateTodo, highlightedText }) => {
+
+    const getTextWithHighlights = (text) => {
+        const regex = new RegExp(`(${highlightedText})`, 'gi');
+        const textArray = text.split(regex);
+        return textArray.map((word)  => {
+            if(word === highlightedText) {
+                return <span className='highlight'>{word}</span>;
+            } return word;
+        })
+    }
+
     return (
         <div className="table-container">
             <div className="table-header">
@@ -29,12 +40,12 @@ const ListComponent = ({ activeTodos, updateTodo }) => {
                                 <div className="table-cell todo">
                                     <div className="data-container">
                                         <div className="icon" role="img" aria-label="Task Icon"></div>
-                                        <span>{todo.todo}</span>
+                                        <span>{getTextWithHighlights(todo.todo)}</span>
                                     </div>
                                 </div>
                                 <div className="table-cell todo">
                                     <div className="data-container">
-                                        <span>{todo.description}</span>
+                                        <span >{getTextWithHighlights(todo.description)}</span>
                                     </div>
                                 </div>
                                 <div className="table-cell">

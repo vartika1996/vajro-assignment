@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Search.css';
 import Button from '../button/Button';
 
-const SearchComponent = ({ todoData, setSearchResults, className, buttonClassName, inputClassName, placeholder}) => {
+const SearchComponent = ({ todoData, setSearchResults, className, buttonClassName, inputClassName, placeholder, setHighlightedText}) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = () => {
@@ -16,6 +16,7 @@ const SearchComponent = ({ todoData, setSearchResults, className, buttonClassNam
             return titleMatch || descriptionMatch;
         });
         setSearchResults(results);
+        setHighlightedText(searchTerm);
     }
   };
 
@@ -28,6 +29,7 @@ const SearchComponent = ({ todoData, setSearchResults, className, buttonClassNam
   const clearSearch = () => {
     setSearchTerm('');
     setSearchResults(todoData); // Optionally clear search results to show all items
+    setHighlightedText('');
   };
 
   return (

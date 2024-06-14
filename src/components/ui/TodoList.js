@@ -18,7 +18,8 @@ const TodoList = () => {
     const [todo, setTodo] = useState();
     const [selectedSort, setSelectedSort] = useState('');
     const [isPopoverOpen, setIsPopoverOpen] = useState('');
-    const {isTablet} = useMediaQuery()
+    const {isTablet} = useMediaQuery();
+    const [highlightedText, setHighlightedText] = useState('')
 
     const updateTodo = (todo) => {
         if(todo) {
@@ -85,6 +86,7 @@ const TodoList = () => {
                                 buttonClassName='searchButton'
                                 inputClassName='searchInput'
                                 placeholder="Search by Title or Description"
+                                setHighlightedText={setHighlightedText}
                             />
                             {!isTablet ? (
                                 <SortComponent
@@ -103,7 +105,7 @@ const TodoList = () => {
                             </div>
                             {isTablet ? (
                                 <ListComponentMobile activeTodos={activeTodos} updateTodo={updateTodo} />
-                            ) : <ListComponent activeTodos={activeTodos} updateTodo={updateTodo} />
+                            ) : <ListComponent activeTodos={activeTodos} updateTodo={updateTodo} highlightedText={highlightedText} />
                             }
                         </div>      
                     </div>

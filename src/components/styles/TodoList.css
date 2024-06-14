@@ -258,6 +258,10 @@
   justify-content: center;
 }
 
+.highlight {
+  background-color: #ccc;
+}
+
 @media (max-width: 1120px) {
   .table-cell {
     min-width: 80px;
